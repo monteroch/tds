@@ -1,6 +1,8 @@
 <template>
   <Navbar/>
-  <router-view/>
+  <div class="main-container flex">
+    <router-view/>
+  </div>
 </template>
 
 <script>
@@ -13,5 +15,9 @@ export default {
 </script>
 
 <style lang="scss">
-
+  .main-container {
+    width: 100vw;
+    min-height: calc(100vh - 50px);
+    justify-content: center;
+  }
 </style>
