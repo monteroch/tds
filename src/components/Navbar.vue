@@ -3,16 +3,23 @@
     <div class="container flex">
       <h2 class="logo">TDS</h2>
       <ul class="flex links">
-        <li>Log in</li>
-        <li>Sign up</li>
+        <li @click="showLogin(true)">Log in</li>
+        <li @click="showLogin(false)">Sign up</li>
       </ul>
     </div>
   </nav>
 </template>
 
 <script>
-export default {
 
+import { mapActions } from 'vuex'
+
+export default {
+  methods: {
+    ...mapActions([
+      'showLogin'
+    ])
+  }
 }
 </script>
 
